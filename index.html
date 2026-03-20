@@ -1,0 +1,934 @@
+
+        <!DOCTYPE html>
+        <html lang="ja">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Scratch Weekly Ranking (High-Density)</title>
+            <style>
+                body { font-family: sans-serif; background: #eef2f3; padding: 10px; }
+                .container { background: white; padding: 20px; border-radius: 15px; max-width: 800px; margin: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+                h1 { color: #16a085; text-align: center; border-left: 8px solid #16a085; padding: 10px; background: #f9f9f9; }
+                .info { text-align: right; color: #7f8c8d; font-size: 0.85em; margin-bottom: 15px; }
+                #search { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #16a085; border-radius: 30px; outline: none; }
+                table { border-collapse: collapse; width: 100%; }
+                th, td { padding: 12px; border-bottom: 1px solid #eee; }
+                th { background: #16a085; color: white; position: sticky; top: 0; }
+                .total-num { font-weight: bold; color: #16a085; font-size: 1.1em; }
+                .rank-1 { background: #e8f8f5; border: 2px solid #1abc9c; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>🔥 週間ガチ勢ランキング</h1>
+                <div class="info">
+                    📅 03/16 〜 現在 | 🕒 更新: 18:58
+                </div>
+                <input type="text" id="search" placeholder="🔍 ユーザー名を検索して順位を確認..." onkeyup="filterTable()">
+                <table id="rankingTable">
+                    <thead><tr><th>順位</th><th>ユーザー名</th><th>活動合計 (コメント/返信)</th></tr></thead>
+                    <tbody>
+        
+                        <tr class="rank-1">
+                            <td>1</td>
+                            <td><strong>yaki-tori-niku</strong></td>
+                            <td><span class="total-num">849</span> <span style="font-size:0.8em;">(175/674)</span></td>
+                        </tr>
+                        <tr >
+                            <td>2</td>
+                            <td><strong>kk1301</strong></td>
+                            <td><span class="total-num">680</span> <span style="font-size:0.8em;">(158/522)</span></td>
+                        </tr>
+                        <tr >
+                            <td>3</td>
+                            <td><strong>ruru1113</strong></td>
+                            <td><span class="total-num">597</span> <span style="font-size:0.8em;">(268/329)</span></td>
+                        </tr>
+                        <tr >
+                            <td>4</td>
+                            <td><strong>kurou-rontya</strong></td>
+                            <td><span class="total-num">418</span> <span style="font-size:0.8em;">(165/253)</span></td>
+                        </tr>
+                        <tr >
+                            <td>5</td>
+                            <td><strong>Qnlyy</strong></td>
+                            <td><span class="total-num">412</span> <span style="font-size:0.8em;">(163/249)</span></td>
+                        </tr>
+                        <tr >
+                            <td>6</td>
+                            <td><strong>-P0N_Z-</strong></td>
+                            <td><span class="total-num">403</span> <span style="font-size:0.8em;">(195/208)</span></td>
+                        </tr>
+                        <tr >
+                            <td>7</td>
+                            <td><strong>kk1301_zatudan</strong></td>
+                            <td><span class="total-num">399</span> <span style="font-size:0.8em;">(82/317)</span></td>
+                        </tr>
+                        <tr >
+                            <td>8</td>
+                            <td><strong>humanoi066</strong></td>
+                            <td><span class="total-num">326</span> <span style="font-size:0.8em;">(199/127)</span></td>
+                        </tr>
+                        <tr >
+                            <td>9</td>
+                            <td><strong>moe_ichinose</strong></td>
+                            <td><span class="total-num">304</span> <span style="font-size:0.8em;">(159/145)</span></td>
+                        </tr>
+                        <tr >
+                            <td>10</td>
+                            <td><strong>perseus2000</strong></td>
+                            <td><span class="total-num">272</span> <span style="font-size:0.8em;">(98/174)</span></td>
+                        </tr>
+                        <tr >
+                            <td>11</td>
+                            <td><strong>bronze_1729</strong></td>
+                            <td><span class="total-num">267</span> <span style="font-size:0.8em;">(198/69)</span></td>
+                        </tr>
+                        <tr >
+                            <td>12</td>
+                            <td><strong>hondakai</strong></td>
+                            <td><span class="total-num">257</span> <span style="font-size:0.8em;">(200/57)</span></td>
+                        </tr>
+                        <tr >
+                            <td>13</td>
+                            <td><strong>ha-tinngu0810</strong></td>
+                            <td><span class="total-num">226</span> <span style="font-size:0.8em;">(109/117)</span></td>
+                        </tr>
+                        <tr >
+                            <td>14</td>
+                            <td><strong>Aww_clldef</strong></td>
+                            <td><span class="total-num">208</span> <span style="font-size:0.8em;">(47/161)</span></td>
+                        </tr>
+                        <tr >
+                            <td>15</td>
+                            <td><strong>wii_kaizo</strong></td>
+                            <td><span class="total-num">198</span> <span style="font-size:0.8em;">(27/171)</span></td>
+                        </tr>
+                        <tr >
+                            <td>16</td>
+                            <td><strong>xc28</strong></td>
+                            <td><span class="total-num">182</span> <span style="font-size:0.8em;">(95/87)</span></td>
+                        </tr>
+                        <tr >
+                            <td>17</td>
+                            <td><strong>-megaue-sub</strong></td>
+                            <td><span class="total-num">179</span> <span style="font-size:0.8em;">(45/134)</span></td>
+                        </tr>
+                        <tr >
+                            <td>18</td>
+                            <td><strong>tatsuscratch</strong></td>
+                            <td><span class="total-num">169</span> <span style="font-size:0.8em;">(33/136)</span></td>
+                        </tr>
+                        <tr >
+                            <td>19</td>
+                            <td><strong>Mizukusai</strong></td>
+                            <td><span class="total-num">164</span> <span style="font-size:0.8em;">(61/103)</span></td>
+                        </tr>
+                        <tr >
+                            <td>20</td>
+                            <td><strong>Hirorotan</strong></td>
+                            <td><span class="total-num">156</span> <span style="font-size:0.8em;">(71/85)</span></td>
+                        </tr>
+                        <tr >
+                            <td>21</td>
+                            <td><strong>kimufi2</strong></td>
+                            <td><span class="total-num">153</span> <span style="font-size:0.8em;">(96/57)</span></td>
+                        </tr>
+                        <tr >
+                            <td>22</td>
+                            <td><strong>animekenn</strong></td>
+                            <td><span class="total-num">150</span> <span style="font-size:0.8em;">(77/73)</span></td>
+                        </tr>
+                        <tr >
+                            <td>23</td>
+                            <td><strong>4ne4ne4ne4ne4ne4nee</strong></td>
+                            <td><span class="total-num">145</span> <span style="font-size:0.8em;">(77/68)</span></td>
+                        </tr>
+                        <tr >
+                            <td>24</td>
+                            <td><strong>066sab</strong></td>
+                            <td><span class="total-num">144</span> <span style="font-size:0.8em;">(71/73)</span></td>
+                        </tr>
+                        <tr >
+                            <td>25</td>
+                            <td><strong>hokkaido315</strong></td>
+                            <td><span class="total-num">144</span> <span style="font-size:0.8em;">(47/97)</span></td>
+                        </tr>
+                        <tr >
+                            <td>26</td>
+                            <td><strong>4neeeeeeeeeeeeeeee4</strong></td>
+                            <td><span class="total-num">140</span> <span style="font-size:0.8em;">(41/99)</span></td>
+                        </tr>
+                        <tr >
+                            <td>27</td>
+                            <td><strong>chi--ta-</strong></td>
+                            <td><span class="total-num">135</span> <span style="font-size:0.8em;">(48/87)</span></td>
+                        </tr>
+                        <tr >
+                            <td>28</td>
+                            <td><strong>nakanakas0113</strong></td>
+                            <td><span class="total-num">131</span> <span style="font-size:0.8em;">(29/102)</span></td>
+                        </tr>
+                        <tr >
+                            <td>29</td>
+                            <td><strong>nontan_abc</strong></td>
+                            <td><span class="total-num">131</span> <span style="font-size:0.8em;">(58/73)</span></td>
+                        </tr>
+                        <tr >
+                            <td>30</td>
+                            <td><strong>matsu100</strong></td>
+                            <td><span class="total-num">127</span> <span style="font-size:0.8em;">(81/46)</span></td>
+                        </tr>
+                        <tr >
+                            <td>31</td>
+                            <td><strong>nontan-Z</strong></td>
+                            <td><span class="total-num">112</span> <span style="font-size:0.8em;">(66/46)</span></td>
+                        </tr>
+                        <tr >
+                            <td>32</td>
+                            <td><strong>zW1D</strong></td>
+                            <td><span class="total-num">89</span> <span style="font-size:0.8em;">(60/29)</span></td>
+                        </tr>
+                        <tr >
+                            <td>33</td>
+                            <td><strong>kure888</strong></td>
+                            <td><span class="total-num">86</span> <span style="font-size:0.8em;">(45/41)</span></td>
+                        </tr>
+                        <tr >
+                            <td>34</td>
+                            <td><strong>yuki9125</strong></td>
+                            <td><span class="total-num">81</span> <span style="font-size:0.8em;">(30/51)</span></td>
+                        </tr>
+                        <tr >
+                            <td>35</td>
+                            <td><strong>wiiu_kalzo</strong></td>
+                            <td><span class="total-num">77</span> <span style="font-size:0.8em;">(33/44)</span></td>
+                        </tr>
+                        <tr >
+                            <td>36</td>
+                            <td><strong>dradra0330</strong></td>
+                            <td><span class="total-num">76</span> <span style="font-size:0.8em;">(31/45)</span></td>
+                        </tr>
+                        <tr >
+                            <td>37</td>
+                            <td><strong>wiiu_kaizo_sub</strong></td>
+                            <td><span class="total-num">76</span> <span style="font-size:0.8em;">(13/63)</span></td>
+                        </tr>
+                        <tr >
+                            <td>38</td>
+                            <td><strong>yasutomo0915</strong></td>
+                            <td><span class="total-num">75</span> <span style="font-size:0.8em;">(16/59)</span></td>
+                        </tr>
+                        <tr >
+                            <td>39</td>
+                            <td><strong>Kten_110</strong></td>
+                            <td><span class="total-num">72</span> <span style="font-size:0.8em;">(53/19)</span></td>
+                        </tr>
+                        <tr >
+                            <td>40</td>
+                            <td><strong>yuuri2017</strong></td>
+                            <td><span class="total-num">66</span> <span style="font-size:0.8em;">(20/46)</span></td>
+                        </tr>
+                        <tr >
+                            <td>41</td>
+                            <td><strong>Lotte_334_Chiba</strong></td>
+                            <td><span class="total-num">66</span> <span style="font-size:0.8em;">(41/25)</span></td>
+                        </tr>
+                        <tr >
+                            <td>42</td>
+                            <td><strong>Deruta140</strong></td>
+                            <td><span class="total-num">63</span> <span style="font-size:0.8em;">(24/39)</span></td>
+                        </tr>
+                        <tr >
+                            <td>43</td>
+                            <td><strong>SumireCandy_o0</strong></td>
+                            <td><span class="total-num">61</span> <span style="font-size:0.8em;">(44/17)</span></td>
+                        </tr>
+                        <tr >
+                            <td>44</td>
+                            <td><strong>cmwxyx-3</strong></td>
+                            <td><span class="total-num">60</span> <span style="font-size:0.8em;">(56/4)</span></td>
+                        </tr>
+                        <tr >
+                            <td>45</td>
+                            <td><strong>surume-0319</strong></td>
+                            <td><span class="total-num">54</span> <span style="font-size:0.8em;">(21/33)</span></td>
+                        </tr>
+                        <tr >
+                            <td>46</td>
+                            <td><strong>toa9_4ne</strong></td>
+                            <td><span class="total-num">53</span> <span style="font-size:0.8em;">(28/25)</span></td>
+                        </tr>
+                        <tr >
+                            <td>47</td>
+                            <td><strong>toranogarasuA</strong></td>
+                            <td><span class="total-num">49</span> <span style="font-size:0.8em;">(16/33)</span></td>
+                        </tr>
+                        <tr >
+                            <td>48</td>
+                            <td><strong>oankukki</strong></td>
+                            <td><span class="total-num">42</span> <span style="font-size:0.8em;">(0/42)</span></td>
+                        </tr>
+                        <tr >
+                            <td>49</td>
+                            <td><strong>foundyou_2</strong></td>
+                            <td><span class="total-num">42</span> <span style="font-size:0.8em;">(24/18)</span></td>
+                        </tr>
+                        <tr >
+                            <td>50</td>
+                            <td><strong>Hiromu0623</strong></td>
+                            <td><span class="total-num">39</span> <span style="font-size:0.8em;">(25/14)</span></td>
+                        </tr>
+                        <tr >
+                            <td>51</td>
+                            <td><strong>Yukunmaru</strong></td>
+                            <td><span class="total-num">37</span> <span style="font-size:0.8em;">(24/13)</span></td>
+                        </tr>
+                        <tr >
+                            <td>52</td>
+                            <td><strong>nanaJSON</strong></td>
+                            <td><span class="total-num">36</span> <span style="font-size:0.8em;">(4/32)</span></td>
+                        </tr>
+                        <tr >
+                            <td>53</td>
+                            <td><strong>upaa-</strong></td>
+                            <td><span class="total-num">32</span> <span style="font-size:0.8em;">(17/15)</span></td>
+                        </tr>
+                        <tr >
+                            <td>54</td>
+                            <td><strong>spease-084</strong></td>
+                            <td><span class="total-num">32</span> <span style="font-size:0.8em;">(17/15)</span></td>
+                        </tr>
+                        <tr >
+                            <td>55</td>
+                            <td><strong>SR_MINATO</strong></td>
+                            <td><span class="total-num">32</span> <span style="font-size:0.8em;">(21/11)</span></td>
+                        </tr>
+                        <tr >
+                            <td>56</td>
+                            <td><strong>MEZOROSO</strong></td>
+                            <td><span class="total-num">31</span> <span style="font-size:0.8em;">(7/24)</span></td>
+                        </tr>
+                        <tr >
+                            <td>57</td>
+                            <td><strong>ricky_anime234</strong></td>
+                            <td><span class="total-num">31</span> <span style="font-size:0.8em;">(15/16)</span></td>
+                        </tr>
+                        <tr >
+                            <td>58</td>
+                            <td><strong>tekiwokuwasero</strong></td>
+                            <td><span class="total-num">31</span> <span style="font-size:0.8em;">(15/16)</span></td>
+                        </tr>
+                        <tr >
+                            <td>59</td>
+                            <td><strong>-sa_b_ri-</strong></td>
+                            <td><span class="total-num">30</span> <span style="font-size:0.8em;">(22/8)</span></td>
+                        </tr>
+                        <tr >
+                            <td>60</td>
+                            <td><strong>4ne-0203</strong></td>
+                            <td><span class="total-num">29</span> <span style="font-size:0.8em;">(7/22)</span></td>
+                        </tr>
+                        <tr >
+                            <td>61</td>
+                            <td><strong>wmem100008</strong></td>
+                            <td><span class="total-num">29</span> <span style="font-size:0.8em;">(10/19)</span></td>
+                        </tr>
+                        <tr >
+                            <td>62</td>
+                            <td><strong>nrurinrunri</strong></td>
+                            <td><span class="total-num">25</span> <span style="font-size:0.8em;">(4/21)</span></td>
+                        </tr>
+                        <tr >
+                            <td>63</td>
+                            <td><strong>shinta2015</strong></td>
+                            <td><span class="total-num">24</span> <span style="font-size:0.8em;">(5/19)</span></td>
+                        </tr>
+                        <tr >
+                            <td>64</td>
+                            <td><strong>11_en4</strong></td>
+                            <td><span class="total-num">24</span> <span style="font-size:0.8em;">(8/16)</span></td>
+                        </tr>
+                        <tr >
+                            <td>65</td>
+                            <td><strong>Satuki_rin</strong></td>
+                            <td><span class="total-num">23</span> <span style="font-size:0.8em;">(18/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>66</td>
+                            <td><strong>toumei_u-rontya</strong></td>
+                            <td><span class="total-num">21</span> <span style="font-size:0.8em;">(5/16)</span></td>
+                        </tr>
+                        <tr >
+                            <td>67</td>
+                            <td><strong>ui_daga</strong></td>
+                            <td><span class="total-num">21</span> <span style="font-size:0.8em;">(11/10)</span></td>
+                        </tr>
+                        <tr >
+                            <td>68</td>
+                            <td><strong>Seijiro1003</strong></td>
+                            <td><span class="total-num">21</span> <span style="font-size:0.8em;">(11/10)</span></td>
+                        </tr>
+                        <tr >
+                            <td>69</td>
+                            <td><strong>oddo1KURA</strong></td>
+                            <td><span class="total-num">20</span> <span style="font-size:0.8em;">(11/9)</span></td>
+                        </tr>
+                        <tr >
+                            <td>70</td>
+                            <td><strong>nontan123</strong></td>
+                            <td><span class="total-num">19</span> <span style="font-size:0.8em;">(13/6)</span></td>
+                        </tr>
+                        <tr >
+                            <td>71</td>
+                            <td><strong>sotaro9999</strong></td>
+                            <td><span class="total-num">19</span> <span style="font-size:0.8em;">(5/14)</span></td>
+                        </tr>
+                        <tr >
+                            <td>72</td>
+                            <td><strong>naginagisan</strong></td>
+                            <td><span class="total-num">18</span> <span style="font-size:0.8em;">(1/17)</span></td>
+                        </tr>
+                        <tr >
+                            <td>73</td>
+                            <td><strong>dorayaki1006</strong></td>
+                            <td><span class="total-num">16</span> <span style="font-size:0.8em;">(9/7)</span></td>
+                        </tr>
+                        <tr >
+                            <td>74</td>
+                            <td><strong>nemu140</strong></td>
+                            <td><span class="total-num">16</span> <span style="font-size:0.8em;">(9/7)</span></td>
+                        </tr>
+                        <tr >
+                            <td>75</td>
+                            <td><strong>rururu-1113</strong></td>
+                            <td><span class="total-num">15</span> <span style="font-size:0.8em;">(8/7)</span></td>
+                        </tr>
+                        <tr >
+                            <td>76</td>
+                            <td><strong>Hawaiian-apple</strong></td>
+                            <td><span class="total-num">14</span> <span style="font-size:0.8em;">(0/14)</span></td>
+                        </tr>
+                        <tr >
+                            <td>77</td>
+                            <td><strong>komugi8888neko</strong></td>
+                            <td><span class="total-num">13</span> <span style="font-size:0.8em;">(8/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>78</td>
+                            <td><strong>Ruruha-sub</strong></td>
+                            <td><span class="total-num">13</span> <span style="font-size:0.8em;">(7/6)</span></td>
+                        </tr>
+                        <tr >
+                            <td>79</td>
+                            <td><strong>musin-siki</strong></td>
+                            <td><span class="total-num">13</span> <span style="font-size:0.8em;">(3/10)</span></td>
+                        </tr>
+                        <tr >
+                            <td>80</td>
+                            <td><strong>mdcmdcf</strong></td>
+                            <td><span class="total-num">13</span> <span style="font-size:0.8em;">(3/10)</span></td>
+                        </tr>
+                        <tr >
+                            <td>81</td>
+                            <td><strong>__-yozorasan-__</strong></td>
+                            <td><span class="total-num">13</span> <span style="font-size:0.8em;">(7/6)</span></td>
+                        </tr>
+                        <tr >
+                            <td>82</td>
+                            <td><strong>naikerusab</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(2/9)</span></td>
+                        </tr>
+                        <tr >
+                            <td>83</td>
+                            <td><strong>naikeru</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(6/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>84</td>
+                            <td><strong>sizukuzusi</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(5/6)</span></td>
+                        </tr>
+                        <tr >
+                            <td>85</td>
+                            <td><strong>AR123-14</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(4/7)</span></td>
+                        </tr>
+                        <tr >
+                            <td>86</td>
+                            <td><strong>shi-cyann</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(4/7)</span></td>
+                        </tr>
+                        <tr >
+                            <td>87</td>
+                            <td><strong>kure8-carp</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(4/7)</span></td>
+                        </tr>
+                        <tr >
+                            <td>88</td>
+                            <td><strong>kiha40-1705</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(6/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>89</td>
+                            <td><strong>rahuks</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(6/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>90</td>
+                            <td><strong>4_n_e-4</strong></td>
+                            <td><span class="total-num">11</span> <span style="font-size:0.8em;">(3/8)</span></td>
+                        </tr>
+                        <tr >
+                            <td>91</td>
+                            <td><strong>TETUOTA999999</strong></td>
+                            <td><span class="total-num">10</span> <span style="font-size:0.8em;">(4/6)</span></td>
+                        </tr>
+                        <tr >
+                            <td>92</td>
+                            <td><strong>TAITITAITYOU</strong></td>
+                            <td><span class="total-num">10</span> <span style="font-size:0.8em;">(4/6)</span></td>
+                        </tr>
+                        <tr >
+                            <td>93</td>
+                            <td><strong>sanatasouta</strong></td>
+                            <td><span class="total-num">10</span> <span style="font-size:0.8em;">(6/4)</span></td>
+                        </tr>
+                        <tr >
+                            <td>94</td>
+                            <td><strong>u_75642</strong></td>
+                            <td><span class="total-num">10</span> <span style="font-size:0.8em;">(7/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>95</td>
+                            <td><strong>xc29</strong></td>
+                            <td><span class="total-num">10</span> <span style="font-size:0.8em;">(0/10)</span></td>
+                        </tr>
+                        <tr >
+                            <td>96</td>
+                            <td><strong>kasiramatu-Official</strong></td>
+                            <td><span class="total-num">9</span> <span style="font-size:0.8em;">(6/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>97</td>
+                            <td><strong>y717112</strong></td>
+                            <td><span class="total-num">9</span> <span style="font-size:0.8em;">(1/8)</span></td>
+                        </tr>
+                        <tr >
+                            <td>98</td>
+                            <td><strong>sumeshi-love</strong></td>
+                            <td><span class="total-num">9</span> <span style="font-size:0.8em;">(0/9)</span></td>
+                        </tr>
+                        <tr >
+                            <td>99</td>
+                            <td><strong>Wh-yWh-y</strong></td>
+                            <td><span class="total-num">9</span> <span style="font-size:0.8em;">(6/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>100</td>
+                            <td><strong>orange--0816</strong></td>
+                            <td><span class="total-num">9</span> <span style="font-size:0.8em;">(4/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>101</td>
+                            <td><strong>sbr1207</strong></td>
+                            <td><span class="total-num">8</span> <span style="font-size:0.8em;">(1/7)</span></td>
+                        </tr>
+                        <tr >
+                            <td>102</td>
+                            <td><strong>atsutodesu</strong></td>
+                            <td><span class="total-num">8</span> <span style="font-size:0.8em;">(4/4)</span></td>
+                        </tr>
+                        <tr >
+                            <td>103</td>
+                            <td><strong>animekenn_sub</strong></td>
+                            <td><span class="total-num">7</span> <span style="font-size:0.8em;">(2/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>104</td>
+                            <td><strong>-4ne-</strong></td>
+                            <td><span class="total-num">7</span> <span style="font-size:0.8em;">(2/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>105</td>
+                            <td><strong>kazunyan3123</strong></td>
+                            <td><span class="total-num">7</span> <span style="font-size:0.8em;">(1/6)</span></td>
+                        </tr>
+                        <tr >
+                            <td>106</td>
+                            <td><strong>kk1301__sub</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(1/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>107</td>
+                            <td><strong>amomihenn</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(4/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>108</td>
+                            <td><strong>1134qqskkxjcc</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(3/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>109</td>
+                            <td><strong>kokerei</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(6/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>110</td>
+                            <td><strong>ruisu715</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(5/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>111</td>
+                            <td><strong>1BlockThreeA1</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(4/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>112</td>
+                            <td><strong>_Seteheme_</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(1/5)</span></td>
+                        </tr>
+                        <tr >
+                            <td>113</td>
+                            <td><strong>Xx_kana_xX</strong></td>
+                            <td><span class="total-num">6</span> <span style="font-size:0.8em;">(3/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>114</td>
+                            <td><strong>sirokuto_Ice-Block</strong></td>
+                            <td><span class="total-num">5</span> <span style="font-size:0.8em;">(5/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>115</td>
+                            <td><strong>Hirorotan3</strong></td>
+                            <td><span class="total-num">5</span> <span style="font-size:0.8em;">(1/4)</span></td>
+                        </tr>
+                        <tr >
+                            <td>116</td>
+                            <td><strong>43231424</strong></td>
+                            <td><span class="total-num">5</span> <span style="font-size:0.8em;">(2/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>117</td>
+                            <td><strong>CAT_CG</strong></td>
+                            <td><span class="total-num">5</span> <span style="font-size:0.8em;">(3/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>118</td>
+                            <td><strong>marikoonkyou</strong></td>
+                            <td><span class="total-num">5</span> <span style="font-size:0.8em;">(3/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>119</td>
+                            <td><strong>yudeta--kani</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(2/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>120</td>
+                            <td><strong>944_u-u</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(2/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>121</td>
+                            <td><strong>4_ne_4_ne_4_ne_4_ne</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(2/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>122</td>
+                            <td><strong>Zv9sum_</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(3/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>123</td>
+                            <td><strong>mochifu</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(3/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>124</td>
+                            <td><strong>Nao-himazin_scratch</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(3/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>125</td>
+                            <td><strong>rukapon</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(0/4)</span></td>
+                        </tr>
+                        <tr >
+                            <td>126</td>
+                            <td><strong>keigo-TV</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(3/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>127</td>
+                            <td><strong>9871rbebjkljh</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(2/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>128</td>
+                            <td><strong>kuya31_</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(1/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>129</td>
+                            <td><strong>Any_P</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(1/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>130</td>
+                            <td><strong>kakuteishinnkoku</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(2/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>131</td>
+                            <td><strong>x_Rama_x</strong></td>
+                            <td><span class="total-num">4</span> <span style="font-size:0.8em;">(3/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>132</td>
+                            <td><strong>test-1634</strong></td>
+                            <td><span class="total-num">3</span> <span style="font-size:0.8em;">(1/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>133</td>
+                            <td><strong>remamesan2</strong></td>
+                            <td><span class="total-num">3</span> <span style="font-size:0.8em;">(0/3)</span></td>
+                        </tr>
+                        <tr >
+                            <td>134</td>
+                            <td><strong>--azukiba--sab</strong></td>
+                            <td><span class="total-num">3</span> <span style="font-size:0.8em;">(2/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>135</td>
+                            <td><strong>EEIITTOO_</strong></td>
+                            <td><span class="total-num">3</span> <span style="font-size:0.8em;">(3/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>136</td>
+                            <td><strong>champ-99anchi</strong></td>
+                            <td><span class="total-num">3</span> <span style="font-size:0.8em;">(3/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>137</td>
+                            <td><strong>toa9</strong></td>
+                            <td><span class="total-num">3</span> <span style="font-size:0.8em;">(2/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>138</td>
+                            <td><strong>kk1303</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(0/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>139</td>
+                            <td><strong>kamome1004</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(1/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>140</td>
+                            <td><strong>Aoto_22</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(1/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>141</td>
+                            <td><strong>nakanakas0113_sub</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(2/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>142</td>
+                            <td><strong>2010kotaro</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(2/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>143</td>
+                            <td><strong>ZZZBanana</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(1/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>144</td>
+                            <td><strong>hisa4107</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(2/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>145</td>
+                            <td><strong>_5ma</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(1/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>146</td>
+                            <td><strong>__-nyanko-__</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(0/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>147</td>
+                            <td><strong>ikakimuti</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(2/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>148</td>
+                            <td><strong>takodesuyorosiku</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(2/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>149</td>
+                            <td><strong>KFC-enthusiast</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(1/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>150</td>
+                            <td><strong>doradora0330</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(1/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>151</td>
+                            <td><strong>3041</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(1/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>152</td>
+                            <td><strong>ywbh502919</strong></td>
+                            <td><span class="total-num">2</span> <span style="font-size:0.8em;">(0/2)</span></td>
+                        </tr>
+                        <tr >
+                            <td>153</td>
+                            <td><strong>moumouteketeke</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>154</td>
+                            <td><strong>Neon-8x_</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>155</td>
+                            <td><strong>NoPJfollower-10K</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>156</td>
+                            <td><strong>mamaghw</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>157</td>
+                            <td><strong>xx--sato--xx</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>158</td>
+                            <td><strong>tikinnramenn</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>159</td>
+                            <td><strong>amenko0204</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>160</td>
+                            <td><strong>yuu_kun0602</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>161</td>
+                            <td><strong>3gv</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>162</td>
+                            <td><strong>____-___-____</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>163</td>
+                            <td><strong>kinoko_noyama</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>164</td>
+                            <td><strong>inu0520</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>165</td>
+                            <td><strong>sk_l4</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>166</td>
+                            <td><strong>Xx--aisu--xX</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>167</td>
+                            <td><strong>Aki_Ghost</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>168</td>
+                            <td><strong>imo_jaga</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>169</td>
+                            <td><strong>b018</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>170</td>
+                            <td><strong>painatupurulu</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>171</td>
+                            <td><strong>kaname13577</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>172</td>
+                            <td><strong>4ne_13</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>173</td>
+                            <td><strong>zyuohhdsa-0456</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>174</td>
+                            <td><strong>bkxvzs</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(0/1)</span></td>
+                        </tr>
+                        <tr >
+                            <td>175</td>
+                            <td><strong>idedaizinn3sei</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>176</td>
+                            <td><strong>mesmerizer22</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>177</td>
+                            <td><strong>1mub</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                        <tr >
+                            <td>178</td>
+                            <td><strong>MAN5MAN5MAN5</strong></td>
+                            <td><span class="total-num">1</span> <span style="font-size:0.8em;">(1/0)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <script>
+            function filterTable() {
+                let filter = document.getElementById("search").value.toLowerCase();
+                let tr = document.getElementById("rankingTable").getElementsByTagName("tr");
+                for (let i = 1; i < tr.length; i++) {
+                    tr[i].style.display = tr[i].getElementsByTagName("td")[1].textContent.toLowerCase().includes(filter) ? "" : "none";
+                }
+            }
+            </script>
+        </body></html>
